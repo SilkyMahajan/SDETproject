@@ -11,7 +11,7 @@ public class Hooks {
     
      @Before
         public void beforeScenario(){
-         System.setProperty("webdriver.chrome.driver", "C:\\Silky\\SeleniumTraining\\Workspace\\Project\\IBM\\bin\\chromedriver.exe");
+         System.setProperty("webdriver.chrome.driver", "C:\\Silky\\SeleniumTraining\\Workspace\\OlaCorp\\SDETproject\\bin\\chromedriver.exe");
          System.out.println("This will run before the Scenario");
          driver = new ChromeDriver();
         
@@ -19,10 +19,10 @@ public class Hooks {
          
         } 
      
-    // @After
-      //  public static void afterScenario(){
-        //    System.out.println("This will run after the Scenario");
-          //  driver.quit();
-        //}
+    @After
+       public static void afterScenario(){
+         System.out.println("This will run after the Scenario");
+            driver.quit();
+        }
      
 }

@@ -1,4 +1,4 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("src/main/java/feature/OlaCorp.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("src/test/java/feature/OlaCorp.feature");
 formatter.feature({
   "line": 1,
   "name": "Validate fields in OLA Corporate Application",
@@ -6,70 +6,111 @@ formatter.feature({
   "id": "validate-fields-in-ola-corporate-application",
   "keyword": "Feature"
 });
-formatter.scenarioOutline({
-  "line": 7,
-  "name": "Enter value in Name",
+formatter.before({
+  "duration": 5740598400,
+  "status": "passed"
+});
+formatter.background({
+  "line": 3,
+  "name": "open the browser and the navigate to the OLACorp page",
   "description": "",
-  "id": "validate-fields-in-ola-corporate-application;enter-value-in-name",
-  "type": "scenario_outline",
-  "keyword": "Scenario Outline",
-  "tags": [
-    {
-      "line": 6,
-      "name": "@Name"
-    }
-  ]
+  "type": "background",
+  "keyword": "Background"
 });
 formatter.step({
-  "line": 8,
-  "name": "User Enter value in Name Text box \"\u003cvalue\u003e\"",
+  "line": 4,
+  "name": "User is on OlaCorp page",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "ContactUs.user_is_on_OlaCorp_page()"
+});
+formatter.result({
+  "duration": 7887352700,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 6,
+  "name": "Validate Empty Name field",
+  "description": "",
+  "id": "validate-fields-in-ola-corporate-application;validate-empty-name-field",
+  "type": "scenario",
+  "keyword": "Scenario"
+});
+formatter.step({
+  "line": 7,
+  "name": "Click on Sumit button with entering value in the field",
   "keyword": "When "
 });
 formatter.step({
-  "line": 9,
-  "name": "Click on Submit button",
+  "line": 8,
+  "name": "Error Message displyed for mandatory name field",
   "keyword": "Then "
 });
-formatter.step({
+formatter.match({
+  "location": "ContactUs_Name.click_on_Sumit_button_with_entering_value_in_the_field()"
+});
+formatter.result({
+  "duration": 5498926900,
+  "status": "passed"
+});
+formatter.match({
+  "location": "ContactUs_Name.error_Message_displyed_for_mandatory_name_field()"
+});
+formatter.result({
+  "duration": 2072985900,
+  "status": "passed"
+});
+formatter.scenarioOutline({
   "line": 10,
-  "name": "Result will display \"\u003cResult\u003e\"",
+  "name": "Validate Name field",
+  "description": "",
+  "id": "validate-fields-in-ola-corporate-application;validate-name-field",
+  "type": "scenario_outline",
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "line": 11,
+  "name": "Enter value in \"\u003cName\u003e\" to validate field length",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 12,
+  "name": "Error Message displyed for Name \"\u003cName\u003e\" field",
   "keyword": "Then "
 });
 formatter.examples({
-  "line": 12,
+  "line": 14,
   "name": "",
   "description": "",
-  "id": "validate-fields-in-ola-corporate-application;enter-value-in-name;",
+  "id": "validate-fields-in-ola-corporate-application;validate-name-field;",
   "rows": [
     {
       "cells": [
-        "value",
-        "Result"
-      ],
-      "line": 13,
-      "id": "validate-fields-in-ola-corporate-application;enter-value-in-name;;1"
-    },
-    {
-      "cells": [
-        "Name@1234",
-        "Name accepts Alphanumeric Char"
-      ],
-      "line": 14,
-      "id": "validate-fields-in-ola-corporate-application;enter-value-in-name;;2"
-    },
-    {
-      "cells": [
-        "Name#1234Text!2345Box1232526*\u0026",
-        "Name accepts 30 Chars"
+        "Name"
       ],
       "line": 15,
-      "id": "validate-fields-in-ola-corporate-application;enter-value-in-name;;3"
+      "id": "validate-fields-in-ola-corporate-application;validate-name-field;;1"
+    },
+    {
+      "cells": [
+        "T"
+      ],
+      "line": 16,
+      "id": "validate-fields-in-ola-corporate-application;validate-name-field;;2"
+    },
+    {
+      "cells": [
+        "testingtestingtestingtestingtestingtestingtestingtestingtestingtestingtestingtestingtestingtest1234567"
+      ],
+      "line": 17,
+      "id": "validate-fields-in-ola-corporate-application;validate-name-field;;3"
     }
   ],
   "keyword": "Examples"
 });
 formatter.before({
-  "duration": 5368441400,
+  "duration": 3934218600,
   "status": "passed"
 });
 formatter.background({
@@ -85,82 +126,64 @@ formatter.step({
   "keyword": "Given "
 });
 formatter.match({
-  "location": "OlaCorpStepDefination.user_is_on_OlaCorp_page()"
+  "location": "ContactUs.user_is_on_OlaCorp_page()"
 });
 formatter.result({
-  "duration": 8860191900,
+  "duration": 10015920900,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 14,
-  "name": "Enter value in Name",
+  "line": 16,
+  "name": "Validate Name field",
   "description": "",
-  "id": "validate-fields-in-ola-corporate-application;enter-value-in-name;;2",
+  "id": "validate-fields-in-ola-corporate-application;validate-name-field;;2",
   "type": "scenario",
-  "keyword": "Scenario Outline",
-  "tags": [
-    {
-      "line": 6,
-      "name": "@Name"
-    }
-  ]
+  "keyword": "Scenario Outline"
 });
 formatter.step({
-  "line": 8,
-  "name": "User Enter value in Name Text box \"Name@1234\"",
+  "line": 11,
+  "name": "Enter value in \"T\" to validate field length",
   "matchedColumns": [
     0
   ],
   "keyword": "When "
 });
 formatter.step({
-  "line": 9,
-  "name": "Click on Submit button",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 10,
-  "name": "Result will display \"Name accepts Alphanumeric Char\"",
+  "line": 12,
+  "name": "Error Message displyed for Name \"T\" field",
   "matchedColumns": [
-    1
+    0
   ],
   "keyword": "Then "
 });
 formatter.match({
   "arguments": [
     {
-      "val": "Name@1234",
-      "offset": 35
+      "val": "T",
+      "offset": 16
     }
   ],
-  "location": "OlaCorpStepDefination.user_Enter_value_in_Name_Text_box(String)"
+  "location": "ContactUs_Name.enter_value_in_to_validate_field_lenght(String)"
 });
 formatter.result({
-  "duration": 441301400,
+  "duration": 5237593000,
   "status": "passed"
 });
 formatter.match({
-  "location": "OlaCorpStepDefination.click_on_Submit_button()"
-});
-formatter.result({
-  "duration": 65867400,
-  "error_message": "org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//span[@id\u003d\u0027recaptcha-anchor\u0027]/div\"}\n  (Session info: chrome\u003d87.0.4280.88)\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027DESKTOP-M2NN2OR\u0027, ip: \u0027192.168.1.10\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_171\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: C:\\Users\\SILKYM~1\\AppData\\L...}, goog:chromeOptions: {debuggerAddress: localhost:61885}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: 3edd4e8ddd7cd93682ee84b4aecbe6a0\n*** Element info: {Using\u003dxpath, value\u003d//span[@id\u003d\u0027recaptcha-anchor\u0027]/div}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)\r\n\tat org.openqa.selenium.By$ByXPath.findElement(By.java:353)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\r\n\tat stepdefination.OlaCorpStepDefination.click_on_Submit_button(OlaCorpStepDefination.java:34)\r\n\tat ✽.Then Click on Submit button(src/main/java/feature/OlaCorp.feature:9)\r\n",
-  "status": "failed"
-});
-formatter.match({
   "arguments": [
     {
-      "val": "Name accepts Alphanumeric Char",
-      "offset": 21
+      "val": "T",
+      "offset": 33
     }
   ],
-  "location": "OlaCorpStepDefination.result_will_display(String)"
+  "location": "ContactUs_Name.error_Message_displyed_for_Name_field(String)"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 2050726100,
+  "status": "passed"
 });
 formatter.before({
-  "duration": 3421424300,
+  "duration": 3902693400,
   "status": "passed"
 });
 formatter.background({
@@ -176,78 +199,364 @@ formatter.step({
   "keyword": "Given "
 });
 formatter.match({
-  "location": "OlaCorpStepDefination.user_is_on_OlaCorp_page()"
+  "location": "ContactUs.user_is_on_OlaCorp_page()"
 });
 formatter.result({
-  "duration": 8339030500,
+  "duration": 10196238600,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 15,
-  "name": "Enter value in Name",
+  "line": 17,
+  "name": "Validate Name field",
   "description": "",
-  "id": "validate-fields-in-ola-corporate-application;enter-value-in-name;;3",
+  "id": "validate-fields-in-ola-corporate-application;validate-name-field;;3",
   "type": "scenario",
-  "keyword": "Scenario Outline",
-  "tags": [
-    {
-      "line": 6,
-      "name": "@Name"
-    }
-  ]
+  "keyword": "Scenario Outline"
 });
 formatter.step({
-  "line": 8,
-  "name": "User Enter value in Name Text box \"Name#1234Text!2345Box1232526*\u0026\"",
+  "line": 11,
+  "name": "Enter value in \"testingtestingtestingtestingtestingtestingtestingtestingtestingtestingtestingtestingtestingtest1234567\" to validate field length",
   "matchedColumns": [
     0
   ],
   "keyword": "When "
 });
 formatter.step({
-  "line": 9,
-  "name": "Click on Submit button",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 10,
-  "name": "Result will display \"Name accepts 30 Chars\"",
+  "line": 12,
+  "name": "Error Message displyed for Name \"testingtestingtestingtestingtestingtestingtestingtestingtestingtestingtestingtestingtestingtest1234567\" field",
   "matchedColumns": [
-    1
+    0
   ],
   "keyword": "Then "
 });
 formatter.match({
   "arguments": [
     {
-      "val": "Name#1234Text!2345Box1232526*\u0026",
-      "offset": 35
+      "val": "testingtestingtestingtestingtestingtestingtestingtestingtestingtestingtestingtestingtestingtest1234567",
+      "offset": 16
     }
   ],
-  "location": "OlaCorpStepDefination.user_Enter_value_in_Name_Text_box(String)"
+  "location": "ContactUs_Name.enter_value_in_to_validate_field_lenght(String)"
 });
 formatter.result({
-  "duration": 515894700,
+  "duration": 5585019800,
   "status": "passed"
 });
 formatter.match({
-  "location": "OlaCorpStepDefination.click_on_Submit_button()"
+  "arguments": [
+    {
+      "val": "testingtestingtestingtestingtestingtestingtestingtestingtestingtestingtestingtestingtestingtest1234567",
+      "offset": 33
+    }
+  ],
+  "location": "ContactUs_Name.error_Message_displyed_for_Name_field(String)"
 });
 formatter.result({
-  "duration": 45731900,
-  "error_message": "org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//span[@id\u003d\u0027recaptcha-anchor\u0027]/div\"}\n  (Session info: chrome\u003d87.0.4280.88)\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027DESKTOP-M2NN2OR\u0027, ip: \u0027192.168.1.10\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_171\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: C:\\Users\\SILKYM~1\\AppData\\L...}, goog:chromeOptions: {debuggerAddress: localhost:65220}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: 85ef00a4bafaac3d57228f8d52e0bf85\n*** Element info: {Using\u003dxpath, value\u003d//span[@id\u003d\u0027recaptcha-anchor\u0027]/div}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)\r\n\tat org.openqa.selenium.By$ByXPath.findElement(By.java:353)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\r\n\tat stepdefination.OlaCorpStepDefination.click_on_Submit_button(OlaCorpStepDefination.java:34)\r\n\tat ✽.Then Click on Submit button(src/main/java/feature/OlaCorp.feature:9)\r\n",
-  "status": "failed"
+  "duration": 2071785100,
+  "status": "passed"
+});
+formatter.scenarioOutline({
+  "line": 19,
+  "name": "Validate phone field max and min field length",
+  "description": "",
+  "id": "validate-fields-in-ola-corporate-application;validate-phone-field-max-and-min-field-length",
+  "type": "scenario_outline",
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "line": 20,
+  "name": "Validate value in phone \"\u003cphone\u003e\" field",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 21,
+  "name": "Error Message displyed entering min value in phone \"\u003cphone\u003e\"",
+  "keyword": "Then "
+});
+formatter.examples({
+  "line": 23,
+  "name": "",
+  "description": "",
+  "id": "validate-fields-in-ola-corporate-application;validate-phone-field-max-and-min-field-length;",
+  "rows": [
+    {
+      "cells": [
+        "phone"
+      ],
+      "line": 24,
+      "id": "validate-fields-in-ola-corporate-application;validate-phone-field-max-and-min-field-length;;1"
+    },
+    {
+      "cells": [
+        "1234567890"
+      ],
+      "line": 25,
+      "id": "validate-fields-in-ola-corporate-application;validate-phone-field-max-and-min-field-length;;2"
+    },
+    {
+      "cells": [
+        "787654323456789"
+      ],
+      "line": 26,
+      "id": "validate-fields-in-ola-corporate-application;validate-phone-field-max-and-min-field-length;;3"
+    }
+  ],
+  "keyword": "Examples"
+});
+formatter.before({
+  "duration": 4220214000,
+  "status": "passed"
+});
+formatter.background({
+  "line": 3,
+  "name": "open the browser and the navigate to the OLACorp page",
+  "description": "",
+  "type": "background",
+  "keyword": "Background"
+});
+formatter.step({
+  "line": 4,
+  "name": "User is on OlaCorp page",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "ContactUs.user_is_on_OlaCorp_page()"
+});
+formatter.result({
+  "duration": 11482203100,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 25,
+  "name": "Validate phone field max and min field length",
+  "description": "",
+  "id": "validate-fields-in-ola-corporate-application;validate-phone-field-max-and-min-field-length;;2",
+  "type": "scenario",
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "line": 20,
+  "name": "Validate value in phone \"1234567890\" field",
+  "matchedColumns": [
+    0
+  ],
+  "keyword": "When "
+});
+formatter.step({
+  "line": 21,
+  "name": "Error Message displyed entering min value in phone \"1234567890\"",
+  "matchedColumns": [
+    0
+  ],
+  "keyword": "Then "
 });
 formatter.match({
   "arguments": [
     {
-      "val": "Name accepts 30 Chars",
-      "offset": 21
+      "val": "1234567890",
+      "offset": 25
     }
   ],
-  "location": "OlaCorpStepDefination.result_will_display(String)"
+  "location": "ContactUs_Phone.validate_value_in_phone_field(String)"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 5278106000,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1234567890",
+      "offset": 52
+    }
+  ],
+  "location": "ContactUs_Phone.error_Message_displyed_entering_min_value_in_phone(String)"
+});
+formatter.result({
+  "duration": 2051652900,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 4315219700,
+  "status": "passed"
+});
+formatter.background({
+  "line": 3,
+  "name": "open the browser and the navigate to the OLACorp page",
+  "description": "",
+  "type": "background",
+  "keyword": "Background"
+});
+formatter.step({
+  "line": 4,
+  "name": "User is on OlaCorp page",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "ContactUs.user_is_on_OlaCorp_page()"
+});
+formatter.result({
+  "duration": 8986544100,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 26,
+  "name": "Validate phone field max and min field length",
+  "description": "",
+  "id": "validate-fields-in-ola-corporate-application;validate-phone-field-max-and-min-field-length;;3",
+  "type": "scenario",
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "line": 20,
+  "name": "Validate value in phone \"787654323456789\" field",
+  "matchedColumns": [
+    0
+  ],
+  "keyword": "When "
+});
+formatter.step({
+  "line": 21,
+  "name": "Error Message displyed entering min value in phone \"787654323456789\"",
+  "matchedColumns": [
+    0
+  ],
+  "keyword": "Then "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "787654323456789",
+      "offset": 25
+    }
+  ],
+  "location": "ContactUs_Phone.validate_value_in_phone_field(String)"
+});
+formatter.result({
+  "duration": 5433309100,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "787654323456789",
+      "offset": 52
+    }
+  ],
+  "location": "ContactUs_Phone.error_Message_displyed_entering_min_value_in_phone(String)"
+});
+formatter.result({
+  "duration": 2057055600,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 4308464900,
+  "status": "passed"
+});
+formatter.background({
+  "line": 3,
+  "name": "open the browser and the navigate to the OLACorp page",
+  "description": "",
+  "type": "background",
+  "keyword": "Background"
+});
+formatter.step({
+  "line": 4,
+  "name": "User is on OlaCorp page",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "ContactUs.user_is_on_OlaCorp_page()"
+});
+formatter.result({
+  "duration": 9208699700,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 28,
+  "name": "Validate Country field drop down list",
+  "description": "",
+  "id": "validate-fields-in-ola-corporate-application;validate-country-field-drop-down-list",
+  "type": "scenario",
+  "keyword": "Scenario"
+});
+formatter.step({
+  "line": 29,
+  "name": "Validate value in Country field is mandatory",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 30,
+  "name": "Error Message displyed without entering value in Country",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "ContactUs_Country.validate_value_in_Country_field_is_mandatory()"
+});
+formatter.result({
+  "duration": 5428429200,
+  "status": "passed"
+});
+formatter.match({
+  "location": "ContactUs_Country.error_Message_displyed_without_entering_value_in_Country()"
+});
+formatter.result({
+  "duration": 2114121300,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 4412532400,
+  "status": "passed"
+});
+formatter.background({
+  "line": 3,
+  "name": "open the browser and the navigate to the OLACorp page",
+  "description": "",
+  "type": "background",
+  "keyword": "Background"
+});
+formatter.step({
+  "line": 4,
+  "name": "User is on OlaCorp page",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "ContactUs.user_is_on_OlaCorp_page()"
+});
+formatter.result({
+  "duration": 9003792800,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 32,
+  "name": "Validate Country field drop down list options",
+  "description": "",
+  "id": "validate-fields-in-ola-corporate-application;validate-country-field-drop-down-list-options",
+  "type": "scenario",
+  "keyword": "Scenario"
+});
+formatter.step({
+  "line": 33,
+  "name": "Validate option available in Country field",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 34,
+  "name": "Verify the option of in Country drop downlist",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "ContactUs_Country.validate_option_available_in_Country_field()"
+});
+formatter.result({
+  "duration": 5417299100,
+  "status": "passed"
+});
+formatter.match({
+  "location": "ContactUs_Country.verify_the_option_of_in_Country_drop_downlist()"
+});
+formatter.result({
+  "duration": 2162917700,
+  "status": "passed"
 });
 });
