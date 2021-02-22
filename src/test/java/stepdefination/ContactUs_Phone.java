@@ -48,7 +48,7 @@ public class ContactUs_Phone {
 	public void error_Message_displyed_entering_min_value_in_phone(String arg1) throws Throwable {
 		Thread.sleep(2000);
 		String phoneValue=driver.findElement(By.xpath("//input[@name='phone_no']")).getAttribute("value");
-		System.out.println(phoneValue);
+		
 		int size = phoneValue.length();
 		if (size < 10 ) {
 			System.out.println("Enter correct value in phone number.");

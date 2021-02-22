@@ -50,7 +50,8 @@ public void error_Message_displyed_without_entering_value_in_Country() throws Th
 	Thread.sleep(2000);
 	Select ddlDepartment = new Select(driver.findElement(By.id("department")));
 	int abc=ddlDepartment.getOptions().indexOf(ddlDepartment.getFirstSelectedOption());
-	System.out.println("aaaaaa" + abc +"bbbbbb");
+	System.out.println("Please select Department to procced a head");
+	
 }
 
 //Entering values to validate options available in Country drop down list

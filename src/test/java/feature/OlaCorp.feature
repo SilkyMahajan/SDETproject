@@ -32,3 +32,12 @@ Feature: Validate fields in OLA Corporate Application
   Scenario: Validate Country field drop down list options
     When Validate option available in Country field
     Then Verify the option of in Country drop downlist
+
+ Scenario Outline: Validate Email field
+    When Enter value in "<Email>" to validate the Email field 
+    Then Error Message displyed for Email "<Email>" field after entering wrong email address
+
+    Examples: 
+      | Email                                                                                                   |
+      | Test                                                                                                      |
+      | testing@ |
